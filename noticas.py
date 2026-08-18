@@ -3,6 +3,7 @@ import os
 import webbrowser
 from datetime import datetime, timedelta
 from time import mktime
+import tablon_noticias.html
 
 # Fuentes RSS por categoría
 FEEDS = {
