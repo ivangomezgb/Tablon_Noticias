@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablón de Noticias Tech & Ciberseguridad</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-cyber: #38bdf8;
+            --accent-dev: #a855f7;
+            --accent-local: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #38bdf8, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--card-bg);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #475569;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+            width: fit-content;
+        }
+
+        .badge-cyber { background-color: rgba(56, 189, 248, 0.15); color: var(--accent-cyber); border: 1px solid rgba(56, 189, 248, 0.3); }
+        .badge-dev { background-color: rgba(168, 85, 247, 0.15); color: var(--accent-dev); border: 1px solid rgba(168, 85, 247, 0.3); }
+        .badge-local { background-color: rgba(245, 158, 11, 0.15); color: var(--accent-local); border: 1px solid rgba(245, 158, 11, 0.3); }
+
+        .title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--card-border);
+            padding-top: 0.75rem;
+        }
+
+        .btn-link {
+            color: var(--accent-cyber);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Tablón de Noticias Tech & Ciberseguridad</h1>
+            <p>Noticias directas sin intermediarios ni IA</p>
+        </header>
+
+        <div class="stats-bar">
+            <span>Total noticias: <strong>104</strong></span>
+            <span>Última actualización: <strong>18/08/2026 16:56</strong></span>
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Your AI-Generated Code Might Not Be Yours</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:42</span>
+                    <a href="https://dev.to/theaidownside/your-ai-generated-code-might-not-be-yours-5314" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Your Retry Budget Is Not a Safety Net</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:40</span>
+                    <a href="https://dev.to/frozer/your-retry-budget-is-not-a-safety-net-o1k" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">ChatGPT Leads Top Google Destinations in Paid-Click Share, iPullRank Finds</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:30</span>
+                    <a href="https://dev.to/alifar/chatgpt-leads-top-google-destinations-in-paid-click-share-ipullrank-finds-md3" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Critical GitLab Zero-Click Flaw Poses Mitigation Challenges</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:25</span>
+                    <a href="https://www.darkreading.com/application-security/critical-gitlab-zero-click-flaw-mitigation-challenges" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Prisma Studio is not an admin panel</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:18</span>
+                    <a href="https://dev.to/divinesta/prisma-studio-is-not-an-admin-panel-4d0m" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Construí 17 calculadoras sin una sola dependencia de JavaScript en el cliente</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:16</span>
+                    <a href="https://dev.to/dhlincoln/construi-17-calculadoras-sin-una-sola-dependencia-de-javascript-en-el-cliente-47jf" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">How I wrote a Go message broker with a throughput of a million messages per second</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:15</span>
+                    <a href="https://dev.to/erkin_khidirov_e1a1d8dc51/how-i-wrote-a-go-message-broker-with-a-throughput-of-a-million-messages-per-second-o86" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">OpenAI GPT-5.6 Launch Reshapes Its Model Line With Sol, Terra and Luna</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:15</span>
+                    <a href="https://dev.to/alifar/openai-gpt-56-launch-reshapes-its-model-line-with-sol-terra-and-luna-2j00" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Claude Code Teaching macOS to Natively Print to the HP Laser 1008a</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:14</span>
+                    <a href="https://cdn.kuber.studio/chat/hp-laser-1008a-driver" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Companies promote incompetent employees to management tolimit damage they can do</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:13</span>
+                    <a href="https://lawsofsoftwareengineering.com/laws/dilbert-principle/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">GPT-4o Mini Fine-Tuning: Evaluation-First Guide</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:09</span>
+                    <a href="https://dev.to/gateofai/gpt-4o-mini-fine-tuning-evaluation-first-guide-43n6" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">D-MO (Data Micro-Optimizer)</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:07</span>
+                    <a href="https://dev.to/omargpax/d-mo-data-micro-optimizer-244f" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Building a Location-Aware Discovery Engine: Why “Nearby” Isn't Just Distance</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:07</span>
+                    <a href="https://dev.to/lee_x/building-a-location-aware-discovery-engine-why-nearby-isnt-just-distance-1e3a" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Building LeeX Admin: Designing a Command Center for a Data-Heavy Platform</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:05</span>
+                    <a href="https://dev.to/lee_x/building-leex-admin-designing-a-command-center-for-a-data-heavy-platform-2nfh" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">ffmpeg-kit-react-native is dead. Here is a native iOS alternative.</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 21:04</span>
+                    <a href="https://dev.to/specvista/ffmpeg-kit-react-native-is-dead-here-is-a-native-ios-alternative-30nj" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">WhiteFiber Proposes $250M Convertible Senior Notes to Fund Data Center Expansion</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 20:25</span>
+                    <a href="https://www.unite.ai/whitefiber-proposes-250m-convertible-senior-notes-to-fund-data-center-expansion/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">OpenAI Puts $5M Behind AI Training and Tools for National Security Oversight Bodies</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 20:18</span>
+                    <a href="https://www.unite.ai/openai-puts-5m-behind-ai-training-and-tools-for-national-security-oversight-bodies/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">'CoSnitch' Attack Tricked Copilot into Mapping Out Architecture</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 20:17</span>
+                    <a href="https://www.darkreading.com/vulnerabilities-threats/cosnitch-attack-copilot-mapping-out-architecture" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Comcast turns your Xfinity WiFi into a home motion detector</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 20:14</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/comcast-turns-your-xfinity-wifi-into-a-home-motion-detector/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Norway Should Buy OpenAI</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 19:30</span>
+                    <a href="https://www.onethousandmeans.com/p/norway-should-buy-openai" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Beware Management Consultants</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 19:29</span>
+                    <a href="https://about.iceland.co.uk/our-story/the-dark-ages/beware-management-consultants/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-local">Colombia & Regional</span>
+                    <h2 class="title">Seguridad 360 en Colombia: ciberseguridad, ciudades inteligentes y riesgos climáticos llegan a ESS+ 2026 - Revista C-Level</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 19:19</span>
+                    <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOGlCek9lei0yS2VlcjV1SXJzcWFTeFdhTUpmbHdMcUpjelVWMEFndi04UmN2MGRuM3pKc0YyU2JKX252VHVJT1pfdlVrZWNPQ29ZRUdqODlRWjV2WWpKMXEzWERpLVZXN3BXcTZfMDMyd0pLNzEtNFYyS1ZVb1FRQ2N3SnMtQkxpWFA0S212QWg5bmF3dW1FUTAzMXNOal85YjBwVUFQS2x4LUMtOFYtSFVSNXo4UzZYenhuS1p0SXpVYkE?oc=5" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Gemini in Chrome Opens to All U.S. Android Users as Auto Browse Goes Mobile</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 19:13</span>
+                    <a href="https://www.unite.ai/gemini-in-chrome-opens-to-all-u-s-android-users-as-auto-browse-goes-mobile/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">IndieWeb Homebrew Website Club Asia Pacific: Reflections</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 19:07</span>
+                    <a href="https://burgeonlab.com/blog/inaugural-hwc-ap-recap/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">CISOs Break Their Silence in 'Declassified' Docuseries</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 18:32</span>
+                    <a href="https://www.darkreading.com/cyber-risk/cisos-break-their-silence-in-declassified-docuseries" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Pacing model development in an era of cyber-critical capabilities</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 18:14</span>
+                    <a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">How does IKEA come up with names for its products?</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 18:11</span>
+                    <a href="https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Turbovec – Google's TurboQuant for vector search in Rust</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 18:07</span>
+                    <a href="https://github.com/RyanCodrai/turbovec" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:47</span>
+                    <a href="https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Saulius Lazaravičius, VP of Product at Hostinger – Interview Series</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:46</span>
+                    <a href="https://www.unite.ai/saulius-lazaravicius-vp-product-at-hostinger-interview-series/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:44</span>
+                    <a href="https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Etched Raises $700M Series D at $21B Valuation to Ramp Inference Hardware Production</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:30</span>
+                    <a href="https://www.unite.ai/etched-raises-700m-series-d-at-21b-valuation-to-ramp-inference-hardware-production/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Clop created custom web shell for Windchill data theft attacks</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:29</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/clop-created-custom-web-shell-for-windchill-data-theft-attacks/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Show HN: macOS data protection keychain for Electron apps</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:25</span>
+                    <a href="https://github.com/biw/keychain-store" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Data centers raise nearby temperatures by up to 4 degrees in Phoenix</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:24</span>
+                    <a href="https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-local">Colombia & Regional</span>
+                    <h2 class="title">Inteligencia artificial también es usada por ciberdelincuentes: experto da claves para detenerlos - NTN24</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 17:19</span>
+                    <a href="https://news.google.com/rss/articles/CBMi6wFBVV95cUxPd2o2ZnNPdnFORnR2OUZHcEJfX1VyM3FKVUlkTkJzcnVNSlRXRkEyMDVHdjdPQkVocTZZdnM2YklHRmRkb2o4NFNodUhOalN1RjFoc3dkaFlZWGVhZGZneHQ4RFJvek9VdmlMVWE4ZkRROElUek5QTG9veXltTlg1bGtGNEdCMnNfUndBUXM2WnlIaXVCRC12Zm5Cd0lxN2h0NWQ0b3dnN2c5ZjVKZmhLRDZod2EybXVCbVlqaVhLcUFyVFM4ZHVMcV9BZS1qUVhBT09kZHlrcVEtalhTN2JhWXNlaXdmT01aVHhv0gHrAUFVX3lxTE4xdnBXOU5KS2g5V2hGV1BPTGo4VWRuRVgxQ3l4OElXNTVlX05HUUFmTEtCNWZORm9YYzZQUm5Pd3dYZXVXaURhWTg2MUt4U0lreWVzLXF1RHF2c21uTzhxZlBybWRWZVhTR0tPNFYyNXdYUVNOclZBYlZ5MHpjbTYzSGdZMmwyVFppaDJ3X2xPSjZ1MkRxelVjeHY4MmxhLUQydmxxSmZyVTVxRTdNc1ZBcU1VRklkdkUwUEg1Q3VaazdhS2hiWWE4bE1zU3BRSS05WDZ5UEE5aHBuSFdhYWpfVndNZW9QZEVjNGc?oc=5" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Ransom Busters Claims It Hacked Ransomware Servers, Asks Victims for Up to $60,000</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 16:58</span>
+                    <a href="https://thehackernews.com/2026/08/ransom-busters-claims-it-hacked.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Lauri Kien Kotcher, CEO and Co-Founder of Different Day – Interview Series</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 16:36</span>
+                    <a href="https://www.unite.ai/lauri-kien-kotcher-ceo-and-co-founder-of-different-day-interview-series/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Launch HN: machine0 (YC S26) – Persistent CPU and GPU VMs from the CLI</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 16:26</span>
+                    <a href="https://machine0.io" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-local">Colombia & Regional</span>
+                    <h2 class="title">Recomendaciones de Kaspersky para donar de forma segura tras el terremoto - areacucuta.com</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 16:00</span>
+                    <a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxNQ2tRY1VheUxYT1gxcmZvRTR0anpVMmhLRXdBYU5yNEROXzVqcmxqUUEwRFh0SjY2N29RaDNzR2RaWFkwNEd5MWZ6WXJua2Q4V094a1EyaEVXYVBlTHZHMk9aaVBvMXhzdEdEV185cVZ2RkNWRHRudGFTNmZMdndoV0hWY3VYUGVVSl8wMzl0VzN1MkhIMFhLRjdxaHhBXzVWUlpRemcxaG4zZ1FHUm9CemhhSFBtemZsNTFRVDJtVU1mUVh5U090MW0xTWRtaVdtRGNYRjdEY3lsckx1WU9paTF3?oc=5" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Show HN: Openleetcode – local LeetCode runner where tests live in the repo</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 15:30</span>
+                    <a href="https://github.com/therepanic/openleetcode" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Edcafe AI Review: The Teacher Tool That’ll Save Your Sunday</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 15:12</span>
+                    <a href="https://www.unite.ai/edcafe-ai-review/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Perplexity’s Free Airtel Year Ends, and Its India Revenue Climbs</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 15:03</span>
+                    <a href="https://www.unite.ai/perplexitys-free-airtel-year-ends-and-its-india-revenue-climbs/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Babies born under sugar rationing grew into adults with lower cancer risk</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 14:06</span>
+                    <a href="https://theconversation.com/babies-born-under-sugar-rationing-grew-into-adults-with-lower-cancer-risk-289873" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Your Controls Block Known Attacks. What About the Behavior?</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 14:01</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/your-controls-block-known-attacks-what-about-the-behavior/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Python Polars Cheatsheet (based on our O'Reilly book)</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:38</span>
+                    <a href="https://opensource.posit.co/resources/cheatsheets/polars/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">The Amazon tax</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:22</span>
+                    <a href="https://seths.blog/2026/08/the-amazon-tax/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Fixing a bricked Framework laptop</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:18</span>
+                    <a href="https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">AI is Less Likely to Launch a Nuclear Strike When It Reasons in Japanese</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:10</span>
+                    <a href="https://www.unite.ai/ai-is-less-likely-to-launch-a-nuclear-strike-when-it-reasons-in-japanese/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">AI Is Speeding Up the Quantum Threat. Defense Still Has a Coordination Problem</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:05</span>
+                    <a href="https://www.unite.ai/ai-accelerates-quantum-computing-cryptography-migration/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">'Ransom Busters': Ransomware Actor Poses as Incident-Recovery Service</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:00</span>
+                    <a href="https://www.darkreading.com/cyberattacks-data-breaches/ransom-busters-ransomware-actor-incident-recovery-service" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Silent 'TwinLoot' Cyber Threat Operates Entirely From Microsoft's Cloud</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 13:00</span>
+                    <a href="https://www.darkreading.com/cloud-security/silent-twinloot-threat-operates-microsoft-cloud" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Using the railway network as a flatbed scanner</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 12:43</span>
+                    <a href="https://philo.gay/linecam/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Fairphone is now officially available in the United States</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 12:42</span>
+                    <a href="https://www.fairphone.com/nl/stories/the-fairphone-gen-6-is-all-about-giving-you-more" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">AI "Mind Viruses" Can Spread Between Agents Through Persistent Prompt Files</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 12:38</span>
+                    <a href="https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">TWINLOOT Abuses SharePoint and Teams to Steal Credentials and Move Across Networks</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 12:38</span>
+                    <a href="https://thehackernews.com/2026/08/twinloot-abuses-sharepoint-and-teams-to.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">One Attacker Has Scraped Both Salesforce and ServiceNow Portals Since 2025</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:30</span>
+                    <a href="https://thehackernews.com/2026/08/one-attacker-has-scraped-both.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">The Collaboration Layer: Why Every Enterprise AI Strategy Needs One</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:30</span>
+                    <a href="https://www.unite.ai/enterprise-ai-collaboration-composable-canvas/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:20</span>
+                    <a href="https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">OpenAI Launches ChatGPT for Teens With Default Protections and Learning Tools</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:17</span>
+                    <a href="https://www.unite.ai/openai-launches-chatgpt-for-teens-with-default-protections-and-learning-tools/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Microsoft tests faster Windows File Explorer, new context menu</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:14</span>
+                    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-faster-windows-explorer-customizable-context-menu/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Don’t Let Cybercriminals Score: What the World Cup Taught Us About Dodging Scams</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:13</span>
+                    <a href="https://www.unite.ai/world-cup-cybersecurity-scam-lessons/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Proctoring in the Age of AI, Why Exam Design Still Comes First</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 11:04</span>
+                    <a href="https://www.unite.ai/future-proofing-online-exams-privacy-laws/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">CISA: Windows Task Host flaw now exploited by ransomware gangs</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 10:32</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Microsoft confirms outage affecting search in Microsoft 365 apps</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 09:24</span>
+                    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-working-to-fix-bug-behind-microsoft-365-search-issues/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">SafePal Hardware Wallet Maker Says Flaw Exposed Data of Nearly 40,000 Customers</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 09:10</span>
+                    <a href="https://thehackernews.com/2026/08/safepal-hardware-wallet-maker-says-flaw.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">LG Hosts NVIDIA at Seoul Robot Data Factory as 100,000-Hour Training Push Takes Shape</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 08:50</span>
+                    <a href="https://www.unite.ai/lg-hosts-nvidia-at-seoul-robot-data-factory-as-100000-hour-training-push-takes-shape/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Microsoft starts removing WMIC tool used by cybercriminals</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 08:12</span>
+                    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-removes-wmic-lolbin-tool-in-windows-11-beta-builds/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Linux 7.3 improves performance when running out of vRAM</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 07:51</span>
+                    <a href="https://pixelcluster.dev/VRAM-Overcommit/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Haut.AI Expands Across 4,000 O Boticário Stores After Pilot Lifts Skincare Order Value 80%</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 07:15</span>
+                    <a href="https://www.unite.ai/haut-ai-expands-across-4000-o-boticario-stores-after-pilot-lifts-skincare-order-value-80/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 06:34</span>
+                    <a href="https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-local">Colombia & Regional</span>
+                    <h2 class="title">En Colombia 41% de los adultos han sufrido fraude en línea, según un estudio de Become Digital - LaRepublica.co</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 05:01</span>
+                    <a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxOM2wwTnRTY0V6a3FMaG1zdEs5R3dReHk0MjQ0ampkLUxMazE3ekl4dU5BazM5RzlxTG5TUlgyS2Juc0lkNDBQemVwUTNsbmR0bGlMNFhDVEplT1V1VTN3RUVBczF6YnRUWHVmckFxcF9vcFd4OVlTbk5LMm8zQnZDVkZEMVZHdzFHMWpnV1NEVThvZXZTVmIzUkxFSWFZQ0FDdGZkeUo5ek9hTnhkTUZ3ZWdrWGxrZ3doQXV0eW1EZWVGMzNmR1ptckNOQ1dkMTZ6WlHSAdIBQVVfeXFMTjNsME50U2NFemtxTGhtc3RLOUd3UXh5NDI0NGpqZC1MTGsxN3pJeHVOQWszOUc5cUxuU1JYMktibnNJZDQwUHplcFEzbG5kdGxpTDRYQ1RKZU9VdVUzd0VFQXMxemJ0VFh1ZnJBcXBfb3BXeDlZU25OSzJvM0J2Q1ZGRDFWR3cxRzFqZ1dTRFU4b2V2U1ZiM1JMRUlhWUNBQ3RmZHlKOXpPYU54ZE1Gd2Vna1hsa2d3aEF1dHltRGVlRjMzZkdabXJDTkNXZDE2elpR?oc=5" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">California's new tire efficiency rules could save drivers $1B a year</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 02:58</span>
+                    <a href="https://grist.org/transportation/californias-new-tire-efficiency-rules-could-save-drivers-1b-a-year/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Anthropic Run-Rate Revenue Hits $65 Billion as IPO Looms</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-18 00:10</span>
+                    <a href="https://www.unite.ai/anthropic-run-rate-revenue-hits-65-billion-as-ipo-looms/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Lanarkshire AI Growth Zone Secures £300M Financing as Dell Establishes Scottish Base</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 23:12</span>
+                    <a href="https://www.unite.ai/lanarkshire-ai-growth-zone-secures-300m-financing-as-dell-establishes-scottish-base/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Video Call Exploit Chains Two Flaws in Unisoc Modems</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 21:37</span>
+                    <a href="https://www.darkreading.com/mobile-security/video-call-exploit-chains-two-flaws-unisoc-modems" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 21:03</span>
+                    <a href="https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">'Turf War' Between Claude Agents Leads to Self-Replicating Malware</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 20:26</span>
+                    <a href="https://www.darkreading.com/threat-intelligence/turf-war-claude-agents-self-replicating-malware" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Hacker claims 3.6 million Azure account records stolen from major companies</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 19:35</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Hugging Face Breach Raises Big Questions About AI Security Controls</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 19:22</span>
+                    <a href="https://www.darkreading.com/vulnerabilities-threats/adam-shostack-talks-hugging-face-phantom-b" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Pokémon Center data breach exposes customer info, cancels some orders</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 19:12</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/pokemon-center-data-breach-exposes-customer-info-cancels-some-orders/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 18:44</span>
+                    <a href="https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 18:22</span>
+                    <a href="https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Cavern C2 Uses DNS and Google Apps Script to Blend Into Legitimate Traffic</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 17:41</span>
+                    <a href="https://thehackernews.com/2026/08/cavern-c2-uses-dns-and-google-apps.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Copilot Autofix Opened a Shell Injection in Snowflake’s CI/CD Pipeline</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 15:55</span>
+                    <a href="https://www.unite.ai/copilot-autofix-opened-a-shell-injection-in-snowflakes-ci-cd-pipeline/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Linux Botnet Evooo1Bot Expands Mirai Capabilities Well Beyond DDoS</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 15:44</span>
+                    <a href="https://www.darkreading.com/cyber-risk/linux-botnet-evooo1bot-mirai-capabilities-beyond-ddos" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">A Constitution for the New Enterprise: 15 Rules for AI Governance</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 15:36</span>
+                    <a href="https://www.unite.ai/enterprise-ai-constitution-governance-framework-principles/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Microsoft confirms GitHub is down worldwide</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 14:47</span>
+                    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-github-is-down-worldwide/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">The Hidden Cost of AI: How “Black Box” Models Are Eroding Trust, Budgets, and the Environment</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 14:45</span>
+                    <a href="https://www.unite.ai/inefficiency-of-general-purpose-ai-models/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Axiom Math’s AI Verifies the 246 Prime-Gaps Theorem in Lean</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 14:32</span>
+                    <a href="https://www.unite.ai/axiom-maths-ai-verifies-the-246-prime-gaps-theorem-in-lean/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-local">Colombia & Regional</span>
+                    <h2 class="title">Ciberataque a Ecopetrol: robaron 327.095 archivos y algunos serían críticos - CAMBIO Colombia</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 14:15</span>
+                    <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQeTlsZ2daeHFUd21NMklJbS1LSDFkN3ZaOUZwNGttMnU2cElwVk1obkRmWjhZblk4R3pXZDhwX0p6LWdwRzZvYURhb3RuX3lTV1o5NXI4T29CSzZ2eDEzNlRkRTlaZ3BzV2hYeGhaeEVxUHc1MW9XR0lKamVnbVZmbDJpX3FmTmR0Z2hiT0lLTEpYNXNreUVkVnpxWXpwcXVfUERTSmdfQ2o3NHRXMW96X1kyWlRqYi1VdE9HVTZNcS1ZYmFNR1E?oc=5" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Monetizing AI: A Modern Framework for How Companies Can Maximize Business Growth</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 14:02</span>
+                    <a href="https://www.unite.ai/how-to-monetize-ai-software/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Certighost and the Privilege Hiding in Your Certificate Authority</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 14:00</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Changing Font Colors Can Hijack AI Reasoning</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 13:54</span>
+                    <a href="https://www.unite.ai/changing-font-colors-can-hijack-ai-reasoning/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-dev">Desarrollo & IA</span>
+                    <h2 class="title">Gravis Robotics Raises $200M Series A to Scale Autonomous Heavy Machinery</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 13:49</span>
+                    <a href="https://www.unite.ai/gravis-robotics-raises-200m-series-a-to-scale-autonomous-heavy-machinery/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">⚡ Weekly Recap: VMware Exploits, Windows 0-Day, MCP Attacks, Browser Hijacks and More</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 13:23</span>
+                    <a href="https://thehackernews.com/2026/08/weekly-recap-vmware-exploits-windows-0.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Windows Server 2022 reaches end of mainstream support in 60 days</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 12:33</span>
+                    <a href="https://www.bleepingcomputer.com/news/microsoft/windows-server-2022-reaches-end-of-mainstream-support-in-60-days/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">How MCP Servers Can Expose Enterprise Secrets</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 11:58</span>
+                    <a href="https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Philips and GE investigating Clop ransomware data theft claims</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 11:25</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 10:52</span>
+                    <a href="https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">French tax authority data breach affects 678,000 individuals</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 10:09</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/french-tax-authority-data-breach-affects-678-000-individuals/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 09:29</span>
+                    <a href="https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Microsoft working on Defender patch for ShieldBreak zero-day</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 09:05</span>
+                    <a href="https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="badge badge-cyber">Ciberseguridad Global</span>
+                    <h2 class="title">Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware</h2>
+                </div>
+                <div class="meta">
+                    <span>2026-08-17 07:36</span>
+                    <a href="https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html" target="_blank" class="btn-link">Leer noticia &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
