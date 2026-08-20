@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "tablon_noticias.html", "use": "@vercel/static" },
+        { "src": "api/noticas.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+        { "src": "/", "dest": "tablon_noticias.html" },
+        { "src": "/api/noticas", "dest": "api/noticas.py" }
+    ]
+    }
